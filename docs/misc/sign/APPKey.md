@@ -31,6 +31,7 @@
 | 9a75abf7de2d8947 | 35ca1c82be6c2c242ecc04d88c735f31 |      `android`       |      BiliScan      |            ?            |          ?           |                                            |
 | aae92bc66f3edfab | af125a0d5279fd576c1b4418a3e8276d |          ?           | PC 投稿工具&PC直播姬|            -            |          ?           |                                            |
 | bca7e84c2d947ac6 | 60698ba2f68e01ce44738920a0ffe768 |          ?           |       login        |            -            |          ?           |                                            |
+| 0ac1706090f12cfc | cdb18f9752ab7a1d09d5941c62893b0c |     `ios`         |       国际版       |            ?           |      `iphone_i`      |                                            |
 | h9Ejat5tFh81cq8V | BdiI92bjmZ9QRcjJBWv2EEssyjekAGKt |                      |                    |                         |                      |      bilibili游戏 web端 游戏详情页API      |
 
 注释:
