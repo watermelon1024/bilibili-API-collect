@@ -73,8 +73,8 @@
 
 | 字段 | 说明 |
 |------|------|
-| access_token | **新** App `access_key`；**旧 access 应视为作废** |
-| refresh_token | **新** 刷新口令；**务必覆盖持久化** |
+| access_token | **新** App `access_key` |
+| refresh_token | **新** 刷新口令；**务必覆盖持久化**（以最新一对为准） |
 | expires_in | 实测仍约 `15552000`（≈180 天） |
 | mid | 不变 |
 
@@ -142,10 +142,10 @@ params["sign"] = appsign(params, appsec)  # cdb18f9752ab7a1d09d5941c62893b0c
 
 POST passport.bilibili.com/x/passport-login/oauth2/refresh_token
 
-# 成功后立刻覆盖存储：
+# 成功后建议覆盖存储为「最新」一对：
 #   token_info.access_token / refresh_token
 #   cookie_info 全罐（至少 SESSDATA + bili_jct）
-# 旧 access / 旧 refresh / 旧 SESSDATA 不要再混用
+# 旧罐当次未必立刻 401，但不要多套混用；长期策略以最新为准
 ```
 
 ---
@@ -168,4 +168,6 @@ POST passport.bilibili.com/x/passport-login/oauth2/refresh_token
 | **-400** | 请求错误 | 缺参、错 path 变体等 |
 | **86033** | appID不匹配 | appkey 与发 token 时不一致 |
 | -101 | 账号未登录 | 多见于 **Web** cookie 刷新误用；本接口材料对时不应出现 |
-| 其它 passport 类 | token 失效 / 已撤销 | 请重新登入 |
+| 其它 passport 类 | token 失效 / 已撤销 | |
+
+完整读码习惯见 [errcode.md](../misc/errcode.md)。
