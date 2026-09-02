@@ -972,3 +972,11 @@ message VolumeInfo {
     // Target true peak 目标响度真峰值
     double target_tp = 7;
 }
+
+// 播放控制模式
+enum PlayCtrl {
+    // 默认模式
+    PLAY_CTRL_DEFAULT = 0;
+    // 简化模式
+    PLAY_CTRL_SIMPLE = 1;
+}

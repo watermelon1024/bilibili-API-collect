@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package bilibili.app.overseas.ad.v1;
+
+// 海外广告信息
+message OverseasAdInfo {
+    // 广告位配置
+    map<string, UnitAdConfigs> slots = 1;
+}
+
+// 广告位配置，内部字段尚未还原
+message UnitAdConfigs {}

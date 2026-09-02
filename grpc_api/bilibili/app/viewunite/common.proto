@@ -84,6 +84,12 @@ message ActivityResource {
     string mod_resource_name = 2;
 }
 
+// 合集目录 Tab
+message CatalogTab {
+    // 标题
+    string title = 1;
+}
+
 // 
 message ActivityTab {
     // 
